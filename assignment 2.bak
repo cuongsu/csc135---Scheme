@@ -1,0 +1,28 @@
+;Cuong Su
+;CSC 135 Assignment 2
+
+;Problem A
+(define (absoluteValue x)
+  (if (< x 0) (* x -1) x))
+
+(define (lessThan2 x)
+  (if (and (> x -10) (< x 10)) -1))
+
+(define (buildLR x y)
+  (if (or (equal? (lessThan2 (absoluteValue x)) -1) (equal? (lessThan2 (absoluteValue y)) -1)) -1))
+
+;Problem C
+(define (count L)
+  (if(null? L) 0
+      (+ 1 (count(cdr L)))))
+
+(define (mid L)
+  (floor (/ (- (count L) 1) 2)))
+
+(define (mid2 L)
+  (floor (/ (count L) 2)))
+
+(define (listify a b)
+  (cons a (cons b '())))
+
+  
